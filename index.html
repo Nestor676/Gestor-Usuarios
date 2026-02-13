@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestor</title>
+    </head>
+
+    <header>
+        <h1>Gestor de usuarios</h1>
+    </header>
+    <body>
+    
+        <button onclick="usuariosRNG()" >Cargar usuarios</button>
+        
+        <h2>Lista de usuarios</h2>
+
+        <ul id="lista"></ul>
+
+        <h2>Añadir usuario</h2>
+
+        <form id="formulario">
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="email" id="email" placeholder="Email">
+            <button type="submit" >Añadir</button>
+        </form>
+
+        <script src="gestor.js"></script>
+    </body>
+</html>
