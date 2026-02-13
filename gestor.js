@@ -4,17 +4,21 @@ document.getElementById("formulario").addEventListener("submit", function(event)
     const nombre = document.getElementById("nombre").value;
     const email = document.getElementById("email").value;
     const lista = document.getElementById("lista");
+    let puede = true;
 
     if(nombre === "" || email === "" || !email.includes(".")){
         alert("Ingresa valores correctos");
+        puede = false;
     }else {
         alert("¡¡Nuevo usuario!!");
     }
 
-    lista.innerHTML += `<li>${nombre} - ${email}</li>`;
+    if(puede == true){
+        lista.innerHTML += `<li>${nombre} - ${email}</li>`;
 
-    document.getElementById("nombre").value = "";
-    document.getElementById("email").value = "";
+        document.getElementById("nombre").value = "";
+        document.getElementById("email").value = "";
+    }
 });
 
 function usuariosRNG(){
